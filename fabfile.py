@@ -38,12 +38,9 @@ STORAGE_DIRECTORY = os.path.join(VAGRANT_DIRECTORY, 'tmp')
 BASH_PROFILE_FILE = os.path.join(HOME_DIRECTORY, '.bash_profile')
 
 REQUIRED_DEBIAN_PACKAGES = [
-    'apache2',
     'expect',
     'fontconfig',
     'git',
-    'pandoc',
-    'php5',
     'libsm6',
     'libxrender-dev',
     'wget']
