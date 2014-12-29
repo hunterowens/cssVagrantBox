@@ -121,8 +121,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #   chef.validation_client_name = "ORGNAME-validator"
   config.vm.provision :fabric do |fab|
     fab.tasks = ["install_required_packages",
-                 "install_anaconda",
-                 "create_bash_profile_file",
-                 "source_bash_profile_file"]
+                 "install_anaconda"]
   end
 end
