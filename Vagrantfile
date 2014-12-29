@@ -47,7 +47,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #
   config.vm.provider "virtualbox" do |vb|
     # Don't boot with headless mode
-     vb.gui = true
+     #vb.gui = true
   
      # Use VBoxManage to customize the VM. For example to change memory:
      vb.customize ["modifyvm", :id, "--memory", "1024"]
@@ -120,6 +120,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #
   #   chef.validation_client_name = "ORGNAME-validator"
   config.vm.provision :fabric do |fab|
-    fab.tasks = ["install_anaconda"]
+    fab.tasks = ["install_required_packages",
+                 "install_anaconda",
+                 "create_bash_profile_file",
+                 "source_bash_profile_file"]
   end
 end
