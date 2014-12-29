@@ -68,8 +68,6 @@ REQUIRED_PYTHON_PACKAGES = [
 ]
 
 
-WEBSITE_LOCAL_DIRECTORY = os.path.join(WORKSPACE_DIRECTORY, 'colour-website')
-
 
 def download(url, directory):
     """
