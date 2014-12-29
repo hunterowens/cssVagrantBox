@@ -1,7 +1,7 @@
 #!/usr/bin/expect
-#exp_internal 1
+# exp_internal 1
 set timeout 600
-spawn /tmp/Anaconda-2.0.1-Linux-x86_64.sh
+spawn [lindex $argv 0]
 send "\r"
 send " "
 send " "
