@@ -131,3 +131,66 @@ def install_anaconda(url=SOFTWARES_URLS.get('anaconda'),
         run('expect {0} {1}'.format(
             anaconda_expect_script, anaconda_installer))
 
+
+@task
+def create_bash_profile_file(bash_profile_file=BASH_PROFILE_FILE):
+    """
+    Task for the *.bash_profile* file creation.
+    Parameters
+    ----------
+    bash_profile_file : unicode
+        *.bash_profile* file path.
+    """
+
+    if not exists(bash_profile_file):
+        bashrc_file = os.path.join(HOME_DIRECTORY, '.bashrc')
+        append(bash_profile_file,
+               'source {0}'.format(bashrc_file))
+        anaconda_bin_directory = os.path.join(
+            HOME_DIRECTORY, 'anaconda', 'bin')
+        append(bash_profile_file,
+               'export PATH={0}:$PATH'.format(anaconda_bin_directory))
+        python_path = ':'.join([repository.directory
+                                for name, repository in REPOSITORIES.items()
+                                if repository.add_to_python_path])
+        append(bash_profile_file,
+               'export PYTHONPATH={0}:$PYTHONPATH'.format(
+                   python_path))
+
+
+@task
+def source_bash_profile_file(bash_profile_file=BASH_PROFILE_FILE):
+    """
+    Task for sourcing the *.bash_profile* file.
+    Parameters
+    ----------
+    bash_profile_file : unicode
+        *.bash_profile* file path.
+    """
+
+    if exists(bash_profile_file):
+        run('source {0}'.format(bash_profile_file))
+
+
+@task
+def create_environments(interpreters=INTERPRETERS,
+                        packages=REQUIRED_PYTHON_PACKAGES):
+    """
+    Task for virtual *Anaconda* environments.
+    Parameters
+    ----------
+    interpreters : dict
+        *Python* interpreters to create.
+    packages : array_like
+        Required *Python* packages to install.
+    """
+
+    for interpreter, version in interpreters.items():
+        anaconda_environment_directory = os.path.join(
+            HOME_DIRECTORY, 'anaconda', 'envs', interpreter)
+        if not exists(anaconda_environment_directory):
+            run('conda create --yes -n {0} python={1} anaconda'.format(
+                interpreter, version))
+            run('source activate {0} && pip install {1}'.format(
+                interpreter, " ".join(packages)))
+
