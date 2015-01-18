@@ -21,5 +21,4 @@ Because Windows isn't a Unix system, we provide a Vagrant Box for building a Vir
 Congrats! You can now run `vagrant ssh` to access your Vagrant Virtual Machine.
 
 ## Problems?
-We will be holding extended office hours on Wednesday to help you work through any issues you may have with this. 
-
+We will be holding extended office hours on Wednesday to help you work through any issues you may have with this. Also feel free to post questions on Piazza. 
