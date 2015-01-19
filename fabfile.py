@@ -44,7 +44,8 @@ REQUIRED_DEBIAN_PACKAGES = [
     'libsm6',
     'libxrender-dev',
     'wget',
-    'mysql-client']
+    'mysql-client',
+    'aptitude']
 
 SOFTWARES_URLS = {
         'anaconda': 'http://09c8d0b2229f813c1b93-c95ac804525aac4b6dba79b00b39d1d3.r79.cf1.rackcdn.com/Anaconda-2.0.1-Linux-x86_64.sh'}  # noqa
@@ -172,6 +173,15 @@ def source_bash_profile_file(bash_profile_file=BASH_PROFILE_FILE):
     if exists(bash_profile_file):
         run('source {0}'.format(bash_profile_file))
 
+
+@task
+def install_mysql():
+    """Task to install mysql-server
+    headless"""
+
+    run("sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password cfss'")
+    run("sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password cfss'")
+    run("sudo aptitude -y install mysql-server")
 
 @task
 def create_environments(interpreters=INTERPRETERS,

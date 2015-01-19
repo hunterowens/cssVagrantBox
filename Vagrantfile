@@ -123,6 +123,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     fab.tasks = ["install_required_packages",
                  "install_anaconda",
                  "create_bash_profile_file",
-                 "source_bash_profile_file"]
+                 "source_bash_profile_file",
+                 "install_mysql"]
   end
 end
