@@ -52,6 +52,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
      # Use VBoxManage to customize the VM. For example to change memory:
      vb.customize ["modifyvm", :id, "--memory", "1024"]
    end
+  config.ssh.forward_x11 = true
   #
   # View the documentation for the provider you're using for more
   # information on available options.
