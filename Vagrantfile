@@ -122,8 +122,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision :fabric do |fab|
     fab.tasks = ["install_required_packages",
                  "install_anaconda",
+                 "install_mysql",
                  "create_bash_profile_file",
                  "source_bash_profile_file",
-                 "install_mysql"]
+                 ] 
   end
 end

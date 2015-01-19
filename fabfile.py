@@ -28,7 +28,8 @@ __all__ = ['VAGRANT_DIRECTORY',
            'source_bash_profile_file',
            'create_environments',
            'clone_repositories',
-           'configure_website']
+           'configure_website',
+           'install_mysql']
 
 VAGRANT_DIRECTORY = '/vagrant'
 HOME_DIRECTORY = '/home/vagrant'
