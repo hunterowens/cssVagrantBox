@@ -6,6 +6,8 @@ This guide will lay out the requirements for the computing for social sciences c
 Everybody needs to sign up for a [Github](github.com) account, and put then fill out [this form](https://docs.google.com/forms/d/1PHhWIvkBj8nO0YNOT_R87BiQ9XvyBcp0PrMvGhCcuwo/viewform).
 
 ## Mac Users
+Mac users should install brew and the command-line tools. Follow the instructions at [brew.sh](http://brew.sh)
+
 Mac Users will need to install the [Anaconda Python Distrobution](http://continuum.io/downloads). Make sure to install python 2.7 and click `yes` when asked to override your `.bash_profile` 
 
 You will also need to install mysql server. [Download](http://dev.mysql.com/downloads/mysql/) and install the .dmg package. 
