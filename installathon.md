@@ -3,7 +3,7 @@
 This guide will lay out the requirements for the computing for social sciences class.
 
 ## Everybody
-Everybody needs to sign up for a [Github](github.com) account, and put then fill out [this form](https://docs.google.com/forms/d/1PHhWIvkBj8nO0YNOT_R87BiQ9XvyBcp0PrMvGhCcuwo/viewform).
+Everybody needs to sign up for a [Github](http://github.com) account, and put then fill out [this form](https://docs.google.com/forms/d/1PHhWIvkBj8nO0YNOT_R87BiQ9XvyBcp0PrMvGhCcuwo/viewform).
 
 ## Mac Users
 Mac users should install brew and the command-line tools. Follow the instructions at [brew.sh](http://brew.sh)
