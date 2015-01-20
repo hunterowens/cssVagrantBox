@@ -8,7 +8,7 @@ Everybody needs to sign up for a [Github](http://github.com) account, and put th
 ## Mac Users
 Mac users should install brew and the command-line tools. Follow the instructions at [brew.sh](http://brew.sh)
 
-Mac Users will need to install the [Anaconda Python Distrobution](http://continuum.io/downloads). Make sure to install python 2.7 and click `yes` when asked to override your `.bash_profile` 
+Mac Users will need to install the [Anaconda Python Distribution](http://continuum.io/downloads). Make sure to install python 2.7 and click `yes` when asked to override your `.bash_profile` 
 
 You will also need to install mysql server. [Download](http://dev.mysql.com/downloads/mysql/) and install the .dmg package. 
 
@@ -16,7 +16,7 @@ You will also need to install mysql server. [Download](http://dev.mysql.com/down
 Cygwin is a Unix-like interface to Windows. 
 
 1. Install [Cygwin](https://cygwin.com/install.html)
-2. Install [Anaconda Python Distrobution](http://continuum.io/downloads). Make sure to install python 2.7 and click `yes` when asked to override your `.profile` 
+2. Install [Anaconda Python Distribution](http://continuum.io/downloads). Make sure to install python 2.7 and click `yes` when asked to override your `.profile` 
 3. Install [MySQL Server](http://dev.mysql.com/downloads/mysql/). 
 
 ## Windows Users (VirtualBox)
