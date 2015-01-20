@@ -10,7 +10,14 @@ Mac Users will need to install the [Anaconda Python Distrobution](http://continu
 
 You will also need to install mysql server. [Download](http://dev.mysql.com/downloads/mysql/) and install the .dmg package. 
 
-## Windows Users
+## Windows Users (cygwin)
+Cygwin is a Unix-like interface to Windows. 
+
+1. Install [Cygwin](https://cygwin.com/install.html)
+2. Install [Anaconda Python Distrobution](http://continuum.io/downloads). Make sure to install python 2.7 and click `yes` when asked to override your `.profile` 
+3. Install [MySQL Server](http://dev.mysql.com/downloads/mysql/). 
+
+## Windows Users (VirtualBox)
 Because Windows isn't a Unix system, we provide a Vagrant Box for building a Virtual Machine (that is , a linux machine running inside your system) with the require dependencies. To do so, follow the instructions below. 
 
 1. Install [Vagrant](https://www.vagrantup.com/)
